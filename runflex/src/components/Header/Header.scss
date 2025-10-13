@@ -1,0 +1,112 @@
+
+@import '../../styles/variables';
+
+
+.header-container {
+  width: 100%;
+
+  .header-top {
+    background-color: $second-color;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 300px;
+
+    .logo img {
+      height: 60px;
+      cursor: pointer;
+    }
+
+    .search-bar {
+      display: flex;
+      align-items: center;
+      width: 40%;
+      background: #fff;
+      border-radius: 4px;
+      overflow: hidden;
+
+      input {
+        flex: 1;
+        padding: 10px 15px;
+        border: none;
+        outline: none;
+        font-size: 15px;
+      }
+
+      button {
+        background: #3b3a3a;
+        color: #fff;
+        border: none;
+        padding: 10px 15px;
+        font-size: 18px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover {
+          background: $primary-color;
+        }
+      }
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+
+      .action-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+        font-size: 17px;
+        text-align: left;
+
+        svg {
+          font-size: 20px;
+        }
+        span {
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+
+  .nav-bar {
+    background-color: #fff;
+    border-top: 1px solid #eee;
+    padding: 10px 0;
+    box-shadow: 0 2px 4px rgb(0, 0, 0, 0.5);
+
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 50px;
+
+      li {
+        font-size: 18px;
+        color: #111;
+        font-weight: 600;
+        cursor: pointer;
+        position: relative;
+        transition: all 0.3s ease;
+
+        span{
+            position: absolute;
+            font-size: 16px;
+            margin-left: 5px ;
+            margin-top: 2px;
+            
+        }
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
