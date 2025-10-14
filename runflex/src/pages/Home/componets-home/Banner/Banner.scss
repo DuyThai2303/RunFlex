@@ -1,84 +1,118 @@
-@import '../../../../styles/variables';
-
+@import "../../../../styles/variables"; 
 
 .banner-container {
   width: 100%;
-  position: relative;
-  max-width: 1500px;
   margin: 10px auto;
-  
+  position: relative;
+  overflow: hidden;
+
+  .slick-dots {
+    bottom: 20px;
+
+    li button:before {
+      font-size: 12px;
+      color: #fff;
+      opacity: 0.7;
+    }
+
+    li.slick-active button:before {
+      color: $primary-color;
+      opacity: 1;
+    }
+  }
 
   .banner-slide {
     position: relative;
     width: 100%;
-    height: 550px; 
+    height: 800px;
 
     .banner-img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       border-radius: 0;
+      filter: brightness(70%);
+      transition: transform 0.8s ease;
     }
+
+    
 
     .banner-overlay {
       position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      inset: 0;
       display: flex;
-      justify-content: center;
       flex-direction: column;
       align-items: center;
-      gap: 15px;
-      z-index: 2;
+      justify-content: center;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.3);
 
       .banner-logo {
-        width: 120px;
+        width: 250px;
         height: auto;
-        border-radius: 50%;
+        filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.5));
       }
 
-      button {
-        background: #fff;
-        color: $text-color;
-        border: none;
-        padding: 20px 55px;
-        font-size: 16px;
-        font-weight: 500;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: all 0.3s ease;
+      .blanchs {
+        font-size: 35px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #fff;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+      }
+
+      .banner-products {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+
+        .product-item {
+          background: rgba(255, 255, 255, 0.15);
+          border-radius: 10px;
+          padding: 10px 12px;
+          width: 120px;
+          text-align: center;
+          backdrop-filter: blur(6px);
+          transition: all 0.3s ease;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+          }
+
+          .product-img {
+            width: 100%;
+            height: 100px;
+            object-fit: contain;
+            margin-bottom: 8px;
+          }
+
+          .product-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.2;
+          }
+        }
+      }
+
+      .more{
+        font-size: 50px;
+        display: flex;
+        align-items: center;
         z-index: 2;
+        transition:  transform  .3s cubic-bezier(0.25, 1, 0.5, 1);
 
-        
+        &:hover{
+          transform: scale(1.15);
+        }
       }
-    }
-
-    &::after{
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.4);
-      z-index: 1;
-
-    }
-  }
-
-  .slick-dots {
-    bottom: 15px;
-
-    li button:before {
-      color: #fff;
-      font-size: 12px;
-      opacity: 0.6;
-    }
-
-    li.slick-active button:before {
-      opacity: 1;
-      color: $primary-color;
     }
   }
 }

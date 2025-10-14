@@ -14,13 +14,13 @@ function Header() {
         <div className="logo">
           <img src={logo} alt="logo" />
         </div>
-
         <div className="search-bar">
           <input type="text" placeholder="Giày Khá..." />
           <button>
             <IoIosSearch />
           </button>
         </div>
+
 
         <div className="header-actions">
           <div className="action-item">
@@ -38,12 +38,13 @@ function Header() {
         </div>
       </div>
 
+
       <nav className="nav-bar">
         <ul>
           <li>Trang chủ</li>
           <li>Giày Nike <span><FaAngleDown /></span></li>
           <li>Giày Adidas <span><FaAngleDown /></span></li>
-          <li>Giày MLB <span><FaAngleDown /></span></li>
+          <li>Giày Puma<span><FaAngleDown /></span></li>
           <li>Giày Khác <span><FaAngleDown /></span></li>
           <li>Quần Áo / Phụ Kiện <span><FaAngleDown /></span></li>
           <li>Nước Hoa <span><FaAngleDown /></span></li>
