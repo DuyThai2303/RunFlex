@@ -27,6 +27,9 @@ function Header() {
             <FaSearchLocation />
             <span>Hệ thống<br />cửa hàng <FaAngleDown/></span>
           </div>
+          <div className = "action-item">
+            <span>Sản phẩm  <br/>yêu thích <FaAngleDown/></span>
+          </div>
           <div className="action-item">
             <FaRegUser />
             <span>Đăng nhập<br />Đăng ký <FaAngleDown/></span>
